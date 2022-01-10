@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="parentContainer">
+  <h2 class="mainHeading">Employee Management System</h2>
+  <p class="subTitle">Open Book Assignment submitted by Dipali</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <button type="button" (click)="goToCreate()"  class="btn btn-primary"
+         [ngClass]="{  'active':createBtn === true }">Create</button>
+      </div>
+      <div class="col-sm-3">
+        <button type="button"  (click)="goToRead()" class="btn btn-primary"  [ngClass]="{  'active':readBtn === true }">Read</button>
+      </div>
+      <div class="col-sm-3">
+        <button type="button"  (click)="goToUpdate()" [ngClass]="{  'active':updateBtn === true }" class="btn btn-primary">Update</button>
+      </div>
+      <div class="col-sm-3">
+        <button type="button" (click)="goToDelete()"  [ngClass]="{  'active':deleteBtn === true }" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+    <hr>
+
+  </div>
+  <router-outlet></router-outlet>
+  </div>
+</div>

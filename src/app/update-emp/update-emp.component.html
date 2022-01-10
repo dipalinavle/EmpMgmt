@@ -1,0 +1,65 @@
+
+<h3 class="subHeading">Update Exsting Employee</h3>
+<hr>
+<div class="row">
+    <div class="col-sm-12">
+        <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" class="formRead"> 
+            <div class="row">
+                <div class="col-sm-6"><label for="empId">Employee ID</label></div>
+                <div class="col-sm-6"> <input type="text" id="empId" name="empId" class="form-control" 
+                    formControlName="empId" placeholder="Employee ID" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="text-align: right; padding-top: 20px;"> <button class="btn btn-lg btn-primary btn-block" type="submit" >Read</button></div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<!--employee details-->
+<hr>
+<div class="row">
+    <div class="col-sm-12">
+        <form [formGroup]="empForm" (ngSubmit)="onClickSubmitEmp(empForm.value)" class="formDetail"> 
+            <div class="row formRow">
+                <input type="hidden" class="form-control" id="id" name="id" formControlName="id">
+                <div class="col-sm-6"><label for="firstName">First Name</label></div>
+                <div class="col-sm-6"> <input type="text" id="firstName" name="firstName" class="form-control" 
+                    formControlName="firstName" placeholder="First Name">
+                </div>
+            </div>
+            <div class="row formRow">
+                <div class="col-sm-6"><label for="surName">Surname</label></div>
+                <div class="col-sm-6"> <input type="text" id="surName" name="surName" class="form-control" 
+                    formControlName="surName" placeholder="Surname">
+                </div>
+            </div>
+            <div class="row formRow">
+                <div class="col-sm-6"><label for="email">Email</label></div>
+                <div class="col-sm-6"> <input type="text" id="email" name="email" class="form-control" 
+                    formControlName="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="row formRow">
+                <div class="col-sm-6"><label for="DOB">Date of Birth</label></div>
+                <div class="col-sm-6"> 
+                    <input id="DOB" name="DOB" class="form-control"  placeholder="Enter Your Date of Birth" type="date" formControlName="DOB" /> 
+                </div>
+            </div>
+            <div class="row formRow">
+                <div class="col-sm-6"><label for="gender">Gender</label></div>
+                <div class="col-sm-3"> 
+                    <input id="male" type="radio" name="gender" value="Male"   formControlName="gender" />  Male 
+                </div>
+                <div class="col-sm-3 gendereSection"> 
+                    <input id="female" type="radio" name="gender" value="Female"  formControlName="gender" /> Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="text-align: right; padding-top: 20px;"> <button class="btn btn-lg btn-primary btn-block" type="submit" >Update</button></div>
+            </div>
+       </form>
+
+    </div>
+</div>
