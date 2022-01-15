@@ -1,14 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { EmployeeDataService } from '../employee-data.service';
 import { CreateEmpComponent } from './create-emp.component';
 
 describe('CreateEmpComponent', () => {
   let component: CreateEmpComponent;
+  let empServiceStub:Partial<EmployeeDataService>;
   let fixture: ComponentFixture<CreateEmpComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateEmpComponent ]
+      declarations: [ CreateEmpComponent ],
+      providers:[{provide:EmployeeDataService, useValue:empServiceStub}]
     })
     .compileComponents();
   });
